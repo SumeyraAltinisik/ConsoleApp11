@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ConsoleApp11
+namespace ConsoleApp11 //burada lingq yaptık.
 {
     class Person:IComparable
     {
