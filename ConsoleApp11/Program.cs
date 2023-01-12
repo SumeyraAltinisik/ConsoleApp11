@@ -13,34 +13,40 @@ namespace ConsoleApp11 //burada lingq yaptık.
 
         public int CompareTo(object? obj)
         {
-            Person person = obj as Person;            
-            if(Age > person.Age)
+            Person person = obj as Person;
+            if (Age > person.Age)
             {
                 return 1;
             }
-            if(Age < person.Age)
+            if (Age < person.Age)
             {
                 return -1;
             }
             return 0;
-            if(Salary < person.Salary)
+            if (Salary < person.Salary)
             {
                 return -1;
             }
-            if(Salary > person.Salary)
+            if (Salary > person.Salary)
             {
                 return 1;
             }
             return 0;
-            if(Heigth < person.Heigth)
+            if (Heigth < person.Heigth)
             {
                 return -1;
             }
-            if(Heigth > person.Heigth)
+            if (Heigth > person.Heigth)
             {
                 return 1;
             }
             return 0;
+
+            //if((Age>person.Age && Age<person.Age) | (Salary>person.Salary && Salary<person.Salary) | (Heigth>person.Heigth && Heigth < person.Heigth))
+            //{
+            //    return 1;             
+            //}
+            //return 0;
         }
     }
     internal class Program
@@ -65,9 +71,9 @@ namespace ConsoleApp11 //burada lingq yaptık.
             people = personList.Where(x => x.City == "Ankara" && x.Age < 30);
             bool found = personList.Exists(x => x.City == "Berlin");
             personList.ForEach(x => x.Age = x.Age * 2);
-            Person p5 = personList.Find(x => x.City == "Istanbul");
-            Person p3 = personList.Single(x => x.City == "Istanbul");
-            Person p4 = personList.SingleOrDefault(x => x.City == "Istanbul", new Person {City="Istanbul" });
+            Person p3 = personList.Find(x => x.City == "Istanbul");
+            Person p4 = personList.Single(x => x.City == "Istanbul");
+            Person p5 = personList.SingleOrDefault(x => x.City == "Istanbul", new Person { City = "Istanbul" });
             foreach (var p in people)
             {
                 StringBuilder sb = new StringBuilder();
